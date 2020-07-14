@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace hyper_shift.Shared
+namespace HyperShift.Shared
 {
     public class WeatherForecast
     {

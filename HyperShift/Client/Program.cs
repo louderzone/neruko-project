@@ -8,7 +8,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 
-namespace hyper_shift.Client
+namespace HyperShift.Client
 {
     public class Program
     {

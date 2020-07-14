@@ -7,7 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 
-namespace hyper_shift.Server
+namespace HyperShift.Server
 {
     public class Startup
     {

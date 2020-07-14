@@ -1,6 +1,6 @@
 {
-  "name": "hyper-shift",
-  "short_name": "hyper-shift",
+  "name": "HyperShift",
+  "short_name": "HyperShift",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#ffffff",

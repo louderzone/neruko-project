@@ -2,8 +2,6 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
-    <RootNamespace>hyper-shift.Server</RootNamespace>
-    <AssemblyName>$(AssemblyName.Replace(' ', '_'))</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\hyper-shift.Client.csproj" />
-    <ProjectReference Include="..\Shared\hyper-shift.Shared.csproj" />
+    <ProjectReference Include="..\Client\HyperShift.Client.csproj" />
+    <ProjectReference Include="..\Shared\HyperShift.Shared.csproj" />
   </ItemGroup>
 
 
