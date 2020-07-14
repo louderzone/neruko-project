@@ -17,6 +17,18 @@
 >
 > 另外，本計劃利用各種 [持續整合(CI)](https://travis-ci.com/louderzone/neruko-project) / [靜態程式分析](https://sonarcloud.io/api/project_badges/measure?project=lz.neruko.shift&metric=alert_status) 工具來保證開發的水準。如果水準不達標，可以試著根據建議改良，如此一來，也可以增強自己的能力，一舉兩得。
 
+## 入門要求
+
+### 環境
+
+- Visual Studio 2019 Community 或以上 (VS Code也可以喇)
+- .NET Core 3.1 SDK
+
+### 技術
+
+- C#
+- [ASP.NET Core with Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/)
+
 ## 計劃藍本
 
 **問：所以，講了這麼久，你女兒是幹什麼用的喇w？**
