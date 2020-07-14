@@ -1,5 +1,15 @@
 language: csharp
 mono: none
+dist: xenial
+os: linux
 dotnet: 3.1.301
 script:
  - dotnet restore
+addons:
+  sonarcloud:
+    organization: "lz" # the key of the org you chose at step #3
+    token:
+      secure: "TLlMlLk9+UVbU12ecUM6ElFf8LKTDRoTSOD9uCB6vhYuziFS6Y8MbxDD0pcUZmhrPpQ7NQJMKwBVrp6b5ii0v2IbLx+8G4j0J5/dyoFLyAT0JEhmISLnk98vw/AFFGjUsmip4v6mMgO4trbU0tgXWfnbckawzmPB6GnS9C4ImmXxTPpK3b0V6NJz4VGOXqlDWGTd6p1ru7MXw+bs+p58EuvM2ZhBgswvqw+KcN7kNW5mtjB/OcR3SM9eOItVEHn7ZVRH96fGRXdCvN2Rd6a+p86HupU/yCpWBRqQNAyQmCR25UCTMGrCMPMyJeahrsC2EHNd6Vn9rjhbW+SwSnaAcvzwX7l1LE5bSUE1A9HH11gSW4578rPzU7KfsQIYD0uZbbux0onB8JbbCkPrmPvnA55ldypJa8GfpBXkIo2LP9cHr610CY1aPDCWlE2DbUDMIGNcyPE18AWLPAc5HF+VmK/+dVOwFmcxHCjpRUmiu/o8ESmvwQMq2MrznAfOowunSS2if3y8IwY33FfOlCvqq9HP8VEz/TSnQ0k3+0SZZ5FMkZRxHLDzvkfno2U6jNYHMZGsCDv/SHhaGP3ozFKu5vyALWAUOvuIhRhblQZC4BnGANRVVQEV4sowGYgvjMyhzT6N7oY7pqPS/kaQDZylW9mGvxAURxMQOb5sSpJUbMc=" # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
