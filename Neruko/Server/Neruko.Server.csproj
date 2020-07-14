@@ -9,8 +9,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\HyperShift.Client.csproj" />
-    <ProjectReference Include="..\Shared\HyperShift.Shared.csproj" />
+    <ProjectReference Include="..\Client\Neruko.Client.csproj" />
+    <ProjectReference Include="..\Shared\Neruko.Shared.csproj" />
   </ItemGroup>
 
 
