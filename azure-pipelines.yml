@@ -13,11 +13,8 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- task: DotNetCoreCLI@2
-  inputs:
-    command: 'restore'
-    feedsToUse: 'select'
-    vstsFeed: 'e7f129c9-6acc-4287-af29-9b44ef777b34'
+- script: dotnet restore --configuration $(buildConfiguration)
+  displayName: 'dotnet restore'
 
 - task: SonarCloudPrepare@1
   displayName: 'Prepare for Sonar Analysis'
