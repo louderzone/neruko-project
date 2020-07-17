@@ -13,8 +13,7 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet restore --configuration $(buildConfiguration)
-  displayName: 'dotnet restore'
+- script: dotnet restore
 
 - task: SonarCloudPrepare@1
   displayName: 'Prepare for Sonar Analysis'
