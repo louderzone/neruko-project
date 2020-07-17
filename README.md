@@ -1,7 +1,7 @@
 # ねるこ我女兒 Hi~ o(*￣▽￣*)ブ
 
-[![Build Status](https://travis-ci.com/louderzone/neruko-project.svg?branch=master)](https://travis-ci.com/louderzone/neruko-project)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lz.neruko.shift&metric=alert_status)](https://sonarcloud.io/dashboard?id=lz.neruko.shift)
+[![Build Status](https://dev.azure.com/louder-zone/Neruko%20Project/_apis/build/status/louderzone.neruko-project?branchName=master)](https://dev.azure.com/louder-zone/Neruko%20Project/_build/latest?definitionId=1&branchName=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lz.neruko&metric=alert_status)](https://sonarcloud.io/dashboard?id=lz.neruko.shift)
 
 一起來打造最強換班能手吧！！
 
