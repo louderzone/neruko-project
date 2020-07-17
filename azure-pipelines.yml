@@ -23,4 +23,7 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'lz.neruko'
     projectName: 'Neruko Project'
-    
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
