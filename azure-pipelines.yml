@@ -15,3 +15,12 @@ variables:
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
+
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'SonarCloud Neruko Project'
+    organization: 'lz'
+    scannerMode: 'MSBuild'
+    projectKey: 'lz.neruko'
+    projectName: 'Neruko Project'
+    
