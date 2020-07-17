@@ -16,6 +16,12 @@ steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
 
+- task: UseDotNet@2
+  displayName: 'Update .NET Core'
+  inputs:
+    packageType: 'sdk'
+    version: '3.1.302'
+
 - task: DotNetCoreCLI@2
   inputs:
     command: 'restore'
@@ -23,6 +29,7 @@ steps:
     vstsFeed: 'e7f129c9-6acc-4287-af29-9b44ef777b34'
 
 - task: SonarCloudPrepare@1
+  displayName: 'Prepare for Sonar Analysis'
   inputs:
     SonarCloud: 'SonarCloud Neruko Project'
     organization: 'lz'
@@ -31,12 +38,15 @@ steps:
     projectName: 'Neruko Project'
 
 - task: DotNetCoreCLI@2
+  displayName: 'dotnet build'
   inputs:
     command: 'build'
     arguments: '--configuration $(buildConfiguration)'
 
 - task: SonarCloudAnalyze@1
+  displayName: 'Sonar Analyze'
 
 - task: SonarCloudPublish@1
+  displayName: 'Publish Sonar analyze results'
   inputs:
     pollingTimeoutSec: '300'
