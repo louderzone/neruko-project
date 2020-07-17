@@ -13,17 +13,25 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-- script: dotnet build --configuration $(buildConfiguration)
-  displayName: 'dotnet build $(buildConfiguration)'
+- script: dotnet restore
+  displayName: 'dotnet restore'
 
 - task: SonarCloudPrepare@1
+  displayName: 'Prepare for Sonar Analysis'
   inputs:
     SonarCloud: 'SonarCloud Neruko Project'
     organization: 'lz'
     scannerMode: 'MSBuild'
     projectKey: 'lz.neruko'
     projectName: 'Neruko Project'
+
+- script: dotnet build --configuration $(buildConfiguration)
+  displayName: 'dotnet build $(buildConfiguration)'
+
 - task: SonarCloudAnalyze@1
+  displayName: 'Sonar Analyze'
+
 - task: SonarCloudPublish@1
+  displayName: 'Publish Sonar analyze results'
   inputs:
     pollingTimeoutSec: '300'

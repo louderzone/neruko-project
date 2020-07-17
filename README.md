@@ -1,7 +1,7 @@
 # ねるこ我女兒 Hi~ o(*￣▽￣*)ブ
 
-[![Build Status](https://travis-ci.com/louderzone/neruko-project.svg?branch=master)](https://travis-ci.com/louderzone/neruko-project)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lz.neruko.shift&metric=alert_status)](https://sonarcloud.io/dashboard?id=lz.neruko.shift)
+[![Build Status](https://dev.azure.com/louder-zone/Neruko%20Project/_apis/build/status/louderzone.neruko-project?branchName=master)](https://dev.azure.com/louder-zone/Neruko%20Project/_build/latest?definitionId=1&branchName=master)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=lz.neruko&metric=alert_status)](https://sonarcloud.io/dashboard?id=lz.neruko)
 
 一起來打造最強換班能手吧！！
 
@@ -15,7 +15,7 @@
 
 > 我們非常歡迎任何人參與開發！如果你對你的編程能力感到疑惑，可以先觀察一下現有代碼，相信很快就上手！
 >
-> 另外，本計劃利用各種 [持續整合(CI)](https://travis-ci.com/louderzone/neruko-project) / [靜態程式分析](https://sonarcloud.io/api/project_badges/measure?project=lz.neruko.shift&metric=alert_status) 工具來保證開發的水準。如果水準不達標，可以試著根據建議改良，如此一來，也可以增強自己的能力，一舉兩得。
+> 另外，本計劃利用各種 [持續整合(CI)](https://dev.azure.com/louder-zone/Neruko%20Project/_build/latest?definitionId=1&branchName=master) / [靜態程式分析](https://sonarcloud.io/dashboard?id=lz.neruko) 工具來保證開發的水準。如果水準不達標，可以試著根據建議改良，如此一來，也可以增強自己的能力，一舉兩得。
 
 ## 入門要求
 
