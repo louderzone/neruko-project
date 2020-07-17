@@ -35,3 +35,12 @@ steps:
   displayName: 'Publish Sonar analyze results'
   inputs:
     pollingTimeoutSec: '300'
+
+- script: dotnet publish --configuration $(BuildConfiguration) --output $(build.artifactstagingdirectory)
+  displayName: 'dotnet publish $(buildConfiguration)'
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: '_neruko-project'
+    publishLocation: 'Container'
