@@ -35,3 +35,24 @@ steps:
   displayName: 'Publish Sonar analyze results'
   inputs:
     pollingTimeoutSec: '300'
+
+- task: UseDotNet@2
+  displayName: 'Update .NET Core SDK'
+  inputs:
+    packageType: 'sdk'
+    version: '3.1.x'
+
+- task: DotNetCoreCLI@2
+  displayName: 'dotnet publish'
+  inputs:
+    command: 'publish'
+    projects: '**/Server/**/*.csproj'
+    publishWebProjects: false
+    arguments: '--configuration $(buildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: true
+
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'neruko-core'
+    publishLocation: 'Container'
