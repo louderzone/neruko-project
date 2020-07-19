@@ -7,6 +7,10 @@
 
 ## 新手入門
 
+如果你對參與計劃感到興趣，可以先參閱[專案維基](https://github.com/louderzone/neruko-project/wiki)，來了解一下計劃需求。
+
+對維基內容，或者計劃細節有任何不理解的地方，可以提交一個「[新議題](https://github.com/louderzone/neruko-project/issues/new)」，請記得在議題上加上「提問」的Label。
+
 **問：我不懂編程，可以做什麼？**
 
 > 提供意見也是開發的一部份哦~~ 你可以先到「[議題列表](https://github.com/louderzone/neruko-project/issues)」看一下現在正在進行的工序。「[新人向](https://github.com/louderzone/neruko-project/labels/%E6%96%B0%E4%BA%BA%E5%90%91)」的議題會是一個好開始。
