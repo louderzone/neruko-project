@@ -5,6 +5,7 @@
     <UserSecretsId>5a0d09ce-8eec-48ad-bee6-8867208ffa9f</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
+    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="4.0.0" />
     <PackageReference Include="DSharpPlus" Version="3.2.3" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="3.2.0" />
   </ItemGroup>
