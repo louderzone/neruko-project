@@ -30,12 +30,12 @@ namespace Neruko.Server.Controllers
         [HttpPost("Shift")]
         public async Task<IActionResult> Post(AnnounceRequest request)
         {
-            if (string.IsNullOrWhiteSpace(request.msg)) return Ok(); // Do not send empty message
+            if (string.IsNullOrWhiteSpace(request.Message)) return Ok(); // Do not send empty message
 
-            var channel = await _discordService.GetChannelAsync(request.cid);
+            var channel = await _discordService.GetChannelAsync(request.ChannelId);
             if (channel == null) return NoContent(); // Channel not found
 
-            await channel.SendMessageAsync(request.msg);
+            await channel.SendMessageAsync(request.Message);
             return Ok();
         }
     }
