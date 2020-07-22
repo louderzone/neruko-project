@@ -5,6 +5,7 @@ using DSharpPlus;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
+using Neruko.Server.Services;
 using Neruko.Server.Settings;
 
 namespace Neruko.Server
@@ -53,6 +54,7 @@ namespace Neruko.Server
         private static void CompositeRoot(HostBuilderContext hostContext, Container container)
         {
             container.RegisterInstance(_neruko);
+            container.Register<IDiscordService, DiscordService>();
         }
 
         /// <summary>
