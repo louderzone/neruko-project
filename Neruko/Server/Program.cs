@@ -14,6 +14,11 @@ namespace Neruko.Server
     {
         private static DiscordClient _neruko;
 
+        /// <summary>
+        /// Entry point of the program
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static async Task Main(string[] args)
         {
             _neruko = await ConfigureDiscord(GetConfigurationRoot());
@@ -37,6 +42,11 @@ namespace Neruko.Server
             return discord;
         }
 
+        /// <summary>
+        /// Creates the web server
+        /// </summary>
+        /// <param name="args"></param>
+        /// <returns></returns>
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
                 .ConfigureWebHostDefaults(webBuilder =>
