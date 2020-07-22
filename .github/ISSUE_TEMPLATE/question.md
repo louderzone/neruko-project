@@ -1,5 +1,5 @@
 ---
-name: 提問
+name: 我想發問
 about: 對計劃有任何不明白的地方都可以提問哦！
 title: ''
 labels: 提問
