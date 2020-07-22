@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using DryIoc;
 using DryIoc.Microsoft.DependencyInjection;
 using DSharpPlus;
@@ -35,6 +36,12 @@ namespace Neruko.Server
         {
             var discordSettings = configuration.GetSection("Discord")
                 .Get<DiscordSettings>();
+            if(discordSettings?.Token == null) {
+                // Discord application credentials not set
+                throw new InvalidOperationException("Please set your `Discord:Token` secret."
+                                                    + " For more info, see https://github.com/louderzone/neruko-project/issues/9");
+            }
+
             var discord = new DiscordClient(new DiscordConfiguration
             {
                 Token = discordSettings.Token,
