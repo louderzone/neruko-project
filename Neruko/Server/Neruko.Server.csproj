@@ -1,17 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk.Web">
-
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>5a0d09ce-8eec-48ad-bee6-8867208ffa9f</UserSecretsId>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
-
   <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="3.2.0" />
+    <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="4.0.0" />
+    <PackageReference Include="DSharpPlus" Version="3.2.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="3.2.1" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
   </ItemGroup>
-
   <ItemGroup>
     <ProjectReference Include="..\Client\Neruko.Client.csproj" />
     <ProjectReference Include="..\Shared\Neruko.Shared.csproj" />
   </ItemGroup>
-
-
 </Project>

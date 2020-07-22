@@ -7,9 +7,21 @@
 
 ## 新手入門
 
-如果你對參與計劃感到興趣，可以先參閱[專案維基](https://github.com/louderzone/neruko-project/wiki)，來了解一下計劃需求。
+### [專案維基](https://github.com/louderzone/neruko-project/wiki)
 
-對維基內容，或者計劃細節有任何不理解的地方，可以提交一個「[新議題](https://github.com/louderzone/neruko-project/issues/new)」，請記得在議題上加上「提問」的Label。
+如果你對參與編程感到興趣，可以先參閱[專案維基](https://github.com/louderzone/neruko-project/wiki)，來了解一下計劃需求。
+
+### [新手教學](https://github.com/louderzone/neruko-project/issues?q=label%3A%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%B8)
+
+對維基內容，或者計劃細節有任何不理解的地方，可以試著先搜索一下標記著「[新手教學](https://github.com/louderzone/neruko-project/issues?q=label%3A%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%B8)」的議題，當中可能已經有人問過同樣的問題，並得到開發者的解答。（提示：搜索功能可以對內文也有效，可以先試著從一些關鍵字搜索，解答方案不一定在標題上反映的）
+
+如果還是解答不到你心中的疑惑，可以提交一個「[新議題](https://github.com/louderzone/neruko-project/issues/new/choose)」，我們會盡快回覆你的。
+
+### [入何開始？](#解決方案堆疊)
+
+如果你有少量編程經驗，可以試著先掌握本專案使用的[解決方案堆疊](#解決方案堆疊)。列出的堆疊都有附上官方教學的鏈接，試著先從征服各個Getting Started吧！
+
+### Q&A
 
 **問：我不懂編程，可以做什麼？**
 
@@ -28,10 +40,11 @@
 - Visual Studio 2019 Community 或以上 (VS Code也可以喇)
 - .NET Core 3.1 SDK
 
-### 技術
+### 解決方案堆疊
 
-- C#
-- [ASP.NET Core with Blazor](https://docs.microsoft.com/en-us/aspnet/core/blazor/)
+- [C#](https://channel9.msdn.com/Series/C-Fundamentals-for-Absolute-Beginners)
+- [ASP.NET Core with Blazor](https://docs.microsoft.com/zh-tw/aspnet/core/tutorials/build-a-blazor-app?view=aspnetcore-3.1)
+- [DSharpPlus](https://dsharpplus.emzi0767.com/articles/intro.html)
 
 ## 計劃藍本
 
