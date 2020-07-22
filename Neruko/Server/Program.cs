@@ -12,7 +12,9 @@ namespace Neruko.Server
 {
     public class Program
     {
-        private static DiscordClient _neruko;
+        #nullable enable
+        private static DiscordClient? _neruko;
+        #nullable disable
 
         /// <summary>
         /// Entry point of the program

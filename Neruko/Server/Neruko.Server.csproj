@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
     <UserSecretsId>5a0d09ce-8eec-48ad-bee6-8867208ffa9f</UserSecretsId>
+    <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="DryIoc.Microsoft.DependencyInjection" Version="4.0.0" />
