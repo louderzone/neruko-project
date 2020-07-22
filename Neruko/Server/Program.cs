@@ -3,6 +3,7 @@ using System.Threading.Tasks;
 using DryIoc;
 using DryIoc.Microsoft.DependencyInjection;
 using DSharpPlus;
+using DSharpPlus.Exceptions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -14,7 +15,7 @@ namespace Neruko.Server
     public class Program
     {
         #nullable enable
-        private static DiscordClient? _neruko;
+        private static IDiscordService? _discordService;
         #nullable disable
 
         /// <summary>
@@ -24,7 +25,7 @@ namespace Neruko.Server
         /// <returns></returns>
         public static async Task Main(string[] args)
         {
-            _neruko = await ConfigureDiscord(GetConfigurationRoot());
+            _discordService = await ConfigureDiscord(GetConfigurationRoot());    
             await CreateHostBuilder(args).Build().RunAsync();
         }
 
@@ -32,23 +33,39 @@ namespace Neruko.Server
         /// Configures and starts the discord runtime
         /// </summary>
         /// <returns></returns>
-        public static async Task<DiscordClient> ConfigureDiscord(IConfigurationRoot configuration)
+        public static async Task<IDiscordService> ConfigureDiscord(IConfigurationRoot configuration)
         {
-            var discordSettings = configuration.GetSection("Discord")
-                .Get<DiscordSettings>();
-            if(discordSettings?.Token == null) {
-                // Discord application credentials not set
-                throw new InvalidOperationException("Please set your `Discord:Token` secret."
-                                                    + " For more info, see https://github.com/louderzone/neruko-project/issues/9");
+            try
+            {
+                var discordSettings = configuration.GetSection("Discord")
+                    .Get<DiscordSettings>();
+                if(discordSettings?.Token == null) {
+                    // Discord application credentials not set
+                    throw new InvalidOperationException("Please set your `Discord:Token` secret."
+                                                        + " For more info, see https://github.com/louderzone/neruko-project/issues/9");
+                }
+
+                var discord = new DiscordClient(new DiscordConfiguration
+                {
+                    Token = discordSettings.Token,
+                    TokenType = TokenType.Bot
+                });
+                await discord.ConnectAsync();
+                _discordService = new DiscordService(discord);
+            }
+            catch (InvalidOperationException ex)
+            {
+                _discordService = new NoDiscordService(ex.Message);
+            }
+            catch (Exception)
+            {
+                // FIXME: DSharpPlus is not throwing the correct `UnauthorizedException`
+                // Thus just an System.Exception is raised. We have no choice but to catch all Exception
+                // If they update later to fix that, please fix this to only capture the related exception.
+                _discordService = new NoDiscordService();
             }
 
-            var discord = new DiscordClient(new DiscordConfiguration
-            {
-                Token = discordSettings.Token,
-                TokenType = TokenType.Bot
-            });
-            await discord.ConnectAsync();
-            return discord;
+            return _discordService;
         }
 
         /// <summary>
@@ -72,8 +89,7 @@ namespace Neruko.Server
         /// <param name="container"></param>
         private static void CompositeRoot(HostBuilderContext hostContext, Container container)
         {
-            container.RegisterInstance(_neruko);
-            container.Register<IDiscordService, DiscordService>();
+            container.RegisterInstance(_discordService);
         }
 
         /// <summary>
