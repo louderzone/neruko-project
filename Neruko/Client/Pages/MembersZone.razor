@@ -1,0 +1,19 @@
+﻿@page "/memberszone"
+
+<h3>Members Zone</h3>
+
+<AuthorizeView>
+    <Authorized>
+        <p>Welcome to the members zone!! You logged in :)</p>
+    </Authorized>
+    <NotAuthorized>
+        <a>Sorry you cannot view this page :(</a>
+    </NotAuthorized>
+</AuthorizeView>
+
+
+<p>Welcome to the members zone!! You logged in :)</p>
+
+@code {
+
+}
