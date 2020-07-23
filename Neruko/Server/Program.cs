@@ -17,6 +17,7 @@ namespace Neruko.Server
     public class Program
     {
         #nullable enable
+        public static IContainer Container { get; private set; } = new Container();
         private static IDiscordService? _discordService;
         #nullable disable
 
@@ -27,7 +28,7 @@ namespace Neruko.Server
         /// <returns></returns>
         public static async Task Main(string[] args)
         {
-            _discordService = await ConfigureDiscord(GetConfigurationRoot());    
+            _discordService = await ConfigureDiscord(GetConfigurationRoot());
             await CreateHostBuilder(args).Build().RunAsync();
         }
 
@@ -57,6 +58,7 @@ namespace Neruko.Server
                 ConfigureCommands(discord);
                 await discord.ConnectAsync();
                 _discordService = new DiscordService(discord);
+                Console.WriteLine($"Discord bot connected as {discord.CurrentUser.Username}");
             }
             catch (InvalidOperationException ex)
             {
@@ -126,6 +128,7 @@ namespace Neruko.Server
         private static void CompositeRoot(HostBuilderContext hostContext, Container container)
         {
             container.RegisterInstance(_discordService);
+            Container = container;
         }
 
         /// <summary>
