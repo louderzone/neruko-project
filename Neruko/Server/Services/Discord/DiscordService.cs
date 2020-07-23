@@ -4,7 +4,7 @@ using DSharpPlus;
 using DSharpPlus.Entities;
 using DSharpPlus.Exceptions;
 
-namespace Neruko.Server.Services
+namespace Neruko.Server.Services.Discord
 {
     ///
     /// <inheritdoc />
