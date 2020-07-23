@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
-using Neruko.Server.Services;
+using Neruko.Server.Services.Discord;
 using Neruko.Shared.Discord;
 
 namespace Neruko.Server.Controllers

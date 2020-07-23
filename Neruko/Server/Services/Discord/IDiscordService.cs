@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.Entities;
 
-namespace Neruko.Server.Services
+namespace Neruko.Server.Services.Discord
 {
     public interface IDiscordService
     {

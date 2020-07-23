@@ -3,11 +3,10 @@ using System.Threading.Tasks;
 using DryIoc;
 using DryIoc.Microsoft.DependencyInjection;
 using DSharpPlus;
-using DSharpPlus.Exceptions;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
-using Neruko.Server.Services;
+using Neruko.Server.Services.Discord;
 using Neruko.Server.Settings;
 
 namespace Neruko.Server

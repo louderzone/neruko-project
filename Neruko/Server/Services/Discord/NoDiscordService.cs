@@ -4,7 +4,7 @@ using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.Entities;
 
-namespace Neruko.Server.Services
+namespace Neruko.Server.Services.Discord
 {
     /// <summary>
     /// This service will be used if the discord client did not start correctly
