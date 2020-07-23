@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30225.117
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neruko.Server", "Neruko\Server\Neruko.Server.csproj", "{D19CCE2B-FF0D-42D3-B552-E5F3C17D0E7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neruko.Server", "Neruko\Server\Neruko.Server.csproj", "{D19CCE2B-FF0D-42D3-B552-E5F3C17D0E7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neruko.Client", "Neruko\Client\Neruko.Client.csproj", "{1563AC64-0C99-45D6-9A18-28573C7804ED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neruko.Client", "Neruko\Client\Neruko.Client.csproj", "{1563AC64-0C99-45D6-9A18-28573C7804ED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Neruko.Shared", "Neruko\Shared\Neruko.Shared.csproj", "{BDCCA055-1D6D-4A13-92A4-7CC1D169D3F0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Neruko.Shared", "Neruko\Shared\Neruko.Shared.csproj", "{BDCCA055-1D6D-4A13-92A4-7CC1D169D3F0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
