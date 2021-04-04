@@ -1,5 +1,4 @@
-﻿#nullable enable
-namespace Neruko.Server.Settings
+﻿namespace Neruko.Server.Settings
 {
     public class DiscordSettings
     {

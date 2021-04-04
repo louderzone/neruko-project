@@ -10,9 +10,7 @@ namespace Neruko.Server
 {
     public class Program
     {
-        #nullable enable
-        private static IDiscordService? _discordService;
-        #nullable disable
+        static IDiscordService? _discordService;
 
         /// <summary>
         /// Entry point of the program
@@ -37,7 +35,7 @@ namespace Neruko.Server
                 {
                     webBuilder.UseStartup<Startup>();
                 })
-                .UseServiceProviderFactory(new DryIocAdapter.DryIocServiceProviderFactory())
+                .UseServiceProviderFactory(new DryIocServiceProviderFactory())
                 .ConfigureContainer<Container>(CompositeRoot);
 
         /// <summary>
@@ -45,7 +43,7 @@ namespace Neruko.Server
         /// </summary>
         /// <param name="hostContext"></param>
         /// <param name="container"></param>
-        private static void CompositeRoot(HostBuilderContext hostContext, Container container)
+        static void CompositeRoot(HostBuilderContext hostContext, Container container)
         {
             container.RegisterInstance(_discordService);
         }
@@ -54,7 +52,7 @@ namespace Neruko.Server
         /// Gets your configurations
         /// </summary>
         /// <returns></returns>
-        private static IConfigurationRoot GetConfigurationRoot()
+        static IConfigurationRoot GetConfigurationRoot()
         {
             return new ConfigurationBuilder()
                 .AddUserSecrets<Program>()

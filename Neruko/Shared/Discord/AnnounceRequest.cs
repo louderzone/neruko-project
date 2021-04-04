@@ -1,6 +1,5 @@
 ﻿using System.Text.Json.Serialization;
 
-#nullable enable
 namespace Neruko.Shared.Discord
 {
     public class AnnounceRequest

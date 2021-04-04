@@ -1,5 +1,4 @@
-﻿#nullable enable
-using System;
+﻿using System;
 using System.Threading.Tasks;
 using DSharpPlus;
 using DSharpPlus.Entities;
@@ -17,7 +16,7 @@ namespace Neruko.Server.Services.Discord
     /// </summary>
     public class NoDiscordService : IDiscordService
     {
-        private readonly string _message = "Please set your `Discord:Token` secret."
+        readonly string _message = "Please set your `Discord:Token` secret."
                                  + Environment.NewLine
                                  + " For more info, see https://github.com/louderzone/neruko-project/issues/9 ."
                                  + Environment.NewLine + Environment.NewLine
